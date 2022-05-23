@@ -19,11 +19,10 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "dev": "tsnd --respawn src/index.ts",
-    "init": "npx typeorm init --name typeorm-tutorial --database postgres --docker",
-    "migrate": "ts-node ./node_modules/typeorm/cli.js migration:run",
-    "revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
-    "generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n migration -p",
-    "generate-dry": "ts-node ./node_modules/typeorm/cli.js migration:generate -n migration -p --dr",
+    "init": "npx typeorm init --name nodejs-mysql-typeorm-migration --database mysql --docker",
+    "migrate:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n migration",
+    "migrate:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "migrate:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
     "make-migration": "npx typeorm migration:create -n migrationName"
   }
 }
